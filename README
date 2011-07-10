@@ -1,0 +1,73 @@
+           _______ _______  ______ ______  _______  ______ _     _ _______
+           |       |______ |_____/ |_____] |______ |_____/ |     | |______
+           |_____  |______ |    \_ |_____] |______ |    \_ |_____| ______|
+                                                                          
+  _____   _____   ______ _______ _     _ __   _  _____  _______ _     _ _______  ______
+ |_____] |     | |_____/    |    |____/  | \  | |     | |       |____/  |______ |_____/
+ |       |_____| |    \_    |    |    \_ |  \_| |_____| |_____  |    \_ |______ |    \_
+                                                                                       
+-----------------------------------------------------------------------------------------
+|											|
+|	Version: 0.0.1		Author: Ellipsis	Date: July 9, 2011		|
+|											|
+|			       (C) Copyright 2011					|
+-----------------------------------------------------------------------------------------
+
+.: TABLE OF CONTENTS :.
+
+1. Disclaimer / Legal Stuff
+2. Project Description
+3. How It Works
+4. Usage
+5. Error Codes
+6. Contact Info
+
+----------------------------------------------------------------------------------------
+
+1.	.:  DISCLAIMER / LEGAL STUFF  :.
+	
+	This source code is distributed under the GNU General Public License, please see
+	file "GPL" which contains this license.
+	
+	By using this source code you agree that the author (Ellipsis) will not be held
+	liable for what the source code/compiled program may do to your computer, whether
+	intended functionality or un-intended functionality the author will not be held
+	liable for any damage, errors, or any other results of using this program.
+	
+	You also agree that you will use this program/source code in a legal manner and
+	the author is not responsible for any illegal usage of the program.  The user of
+	the program will be responsible for his/her actions with said program/source.
+	
+----------------------------------------------------------------------------------------
+
+2.	.:  PROJECT DESCRIPTION  :.
+
+	This program was designed as an effective and stealhy portknocker application
+	which allows communications on a secure and covert channel.  It can be configured
+	to accept any number of 'knocks' on any ports and then to open one (or multiple)
+	sockets for further communications with or without authentication.
+	
+	Stealth is the goal of this application from network scanning techniques that
+	detect open TCP ports.  The program hides from these scans by only listening for
+	specific UDP packets on the specified ports.  Nmap scans cannot detect this
+	program running and the knock sequence ensures that brute force cannot be used
+	to access or determine whether the program is running/listening.
+	
+----------------------------------------------------------------------------------------
+
+3.	.:  HOW IT WORKS  :.
+
+	This program functions by listening for UDP packets across 3 or more ports which
+	we'll denote ports X, Y, and Z.  If the program recieves 3 properly crafted UDP
+	packets on ports X, Y, and Z, in the proper order and within a set amount of time
+	(T), it will then open a TCP port and listen for connections to it.  These TCP
+	socket connections can be set to use the authentication method built into the
+	program, or be un-authenticated (less secure, but the knock sequence should
+	prevent any unauthorized access).  It can also be configured to communicate
+	securely via encrypted communications.
+
+----------------------------------------------------------------------------------------
+
+4.	.:  USAGE :.
+
+	
